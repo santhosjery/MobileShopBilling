@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA995D77-9EB4-4FF2-976E-2690A4CC78C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MobileShopBilling</RootNamespace>
+    <AssemblyName>MobileShopBilling</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>Refrences\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminSettings\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminSettings\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminSettings\EmployeeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminSettings\EmployeeDetails.Designer.cs">
+      <DependentUpon>EmployeeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_Dashboard.Designer.cs">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CommonClasses\CommonModel.cs" />
+    <Compile Include="Admin\CommonClasses\ExceptionILogger.cs" />
+    <Compile Include="Admin\CommonClasses\ExceptionLogger.cs" />
+    <Compile Include="Admin\CommonClasses\UserInfo.cs" />
+    <Compile Include="Admin\Details\AvailableStockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Details\AvailableStockReport.Designer.cs">
+      <DependentUpon>AvailableStockReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Details\PurchaseDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Details\PurchaseDetails.Designer.cs">
+      <DependentUpon>PurchaseDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Details\SalesDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Details\SalesDetails.Designer.cs">
+      <DependentUpon>SalesDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Details\StockDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Details\StockDetails.Designer.cs">
+      <DependentUpon>StockDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Master\Brand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Master\Brand.Designer.cs">
+      <DependentUpon>Brand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Master\ColorDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Master\ColorDetails.Designer.cs">
+      <DependentUpon>ColorDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Master\Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Master\Item.Designer.cs">
+      <DependentUpon>Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Master\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Master\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Master\SupplierLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Master\SupplierLedger.Designer.cs">
+      <DependentUpon>SupplierLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Master\Tax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Master\Tax.Designer.cs">
+      <DependentUpon>Tax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ReportForm\SalesBillingCrystalRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesBillingCrystalRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\ReportForm\SalesBillingDataSet.cs">
+      <DependentUpon>SalesBillingDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\ReportForm\SalesBillingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesBillingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ReportForm\SalesBillingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ReportForm\SalesBillingReport.Designer.cs">
+      <DependentUpon>SalesBillingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Transactions\DataGridPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Transactions\DataGridPopUp.Designer.cs">
+      <DependentUpon>DataGridPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Transactions\Purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Transactions\Purchase.Designer.cs">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Transactions\Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Transactions\Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginHome.Designer.cs">
+      <DependentUpon>LoginHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox\MsgBoxMessages.cs" />
+    <Compile Include="MessageBox\MyMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox\MyMessageBox.Designer.cs">
+      <DependentUpon>MyMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\AdminHome.resx">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminSettings\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminSettings\EmployeeDetails.resx">
+      <DependentUpon>EmployeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_Dashboard.resx">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Details\AvailableStockReport.resx">
+      <DependentUpon>AvailableStockReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Details\PurchaseDetails.resx">
+      <DependentUpon>PurchaseDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Details\SalesDetails.resx">
+      <DependentUpon>SalesDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Details\StockDetails.resx">
+      <DependentUpon>StockDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Master\Brand.resx">
+      <DependentUpon>Brand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Master\ColorDetails.resx">
+      <DependentUpon>ColorDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Master\Item.resx">
+      <DependentUpon>Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Master\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Master\SupplierLedger.resx">
+      <DependentUpon>SupplierLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Master\Tax.resx">
+      <DependentUpon>Tax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ReportForm\SalesBillingCrystalRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesBillingCrystalRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ReportForm\SalesBillingReport.resx">
+      <DependentUpon>SalesBillingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Transactions\DataGridPopUp.resx">
+      <DependentUpon>DataGridPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Transactions\Purchase.resx">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Transactions\Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginHome.resx">
+      <DependentUpon>LoginHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox\MyMessageBox.resx">
+      <DependentUpon>MyMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Admin\ReportForm\SalesBillingDataSet.xsc">
+      <DependentUpon>SalesBillingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Admin\ReportForm\SalesBillingDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalesBillingDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Admin\ReportForm\SalesBillingDataSet.xss">
+      <DependentUpon>SalesBillingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\293.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\164577 .png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\164577 .png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\About_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Add File_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Add New_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Add New_48px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Add User Male_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\b7c34a0fad179c020ae3adb7993a8d4e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Billing_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Close Window_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\download1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Edit Property_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Edit Row_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Edit Row_48px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Full_Glass_blue_contacts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Gaim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Go Back_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Home_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-export-50%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-export-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-export-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-import-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-Login-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Info_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\newlogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Passenger_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Print_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Product_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Save_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Search_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\spin_u_alphabet_letter_black_animation_clipart.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Submit Progress_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Trash_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\uname.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\user-image-with-black-background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Windows Live Messenger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{19f536ea-4fd6-4162-badb-ff65b5ef4a4d}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainModel\DomainModel.csproj">
+      <Project>{756d8f01-5461-48dd-8b58-0788901b28ef}</Project>
+      <Name>DomainModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Mobiles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
